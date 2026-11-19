@@ -34,7 +34,7 @@ An extension is optional in this seven-session plan. Possible extensions: a watc
 | ÕV8 | Demonstrate the complete ranking pipeline and database integrity, with test evidence and an explanation of sorting complexity. Teacher confirms whether this complexity is sufficient for the formal outcome. |
 | ÕV9 | Another student can install and run the project from your English README and explain its architecture from the documents. |
 
-Assess each outcome as **not yet demonstrated**, **demonstrated**, or **demonstrated with depth**. Assess application behaviour and code structure; visual styling is outside this course. Do not use an arbitrary test count as a substitute for boundary coverage.
+Assess each outcome as **not yet demonstrated**, **demonstrated**, or **demonstrated with depth**. Assess application behaviour and code structure. Do not use an arbitrary test count as a substitute for boundary coverage.
 
 ## Demonstration proposal
 

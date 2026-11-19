@@ -57,6 +57,7 @@ Complete these required tasks before the next session:
 
 ## Exit checklist
 
+- [ ] Node.js 24 LTS is selected and its exact version is committed in `.nvmrc`.
 - [ ] Both / and /movies load and navigation works.
 - [ ] MovieCard receives typed props; fixtures live outside the page.
 - [ ] Genre appears for every movie after independent work.

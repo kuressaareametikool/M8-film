@@ -10,7 +10,7 @@ This course structure is adapted from [Kuressaare Ametikool M8](https://github.c
 | Working time assumption | 2 hours in class + approximately 2 hours independent work per session; confirm against the actual timetable |
 | Prerequisites | JavaScript basics, arrays, objects, functions, and basic HTML; React experience helps |
 | Track | Next.js App Router, React, TypeScript, SQLite, Prisma, Vitest |
-| Presentation | Semantic HTML and browser defaults; styling is covered in another course |
+| Presentation | Semantic HTML and browser defaults |
 | Final submission | The same Movie Club application, tests, Git history, and English documentation |
 
 ## How we work
@@ -81,7 +81,7 @@ This repository contains the course materials. Each student creates their own Gi
 
 ## Before session 1
 
-Install a maintained Node.js LTS release compatible with the selected tools, npm, Git, a code editor, and a browser. Create a GitHub account. We verify versions together before generating the application and commit the resulting lockfile. Future Prisma and Vitest versions are selected and checked when introduced; this plan does not assume that older setup commands remain valid.
+Install nvm (macOS/Linux or Windows through WSL), Git, a code editor, and a browser. Session 1 selects Node.js 24 LTS with nvm and records the exact installed version in `.nvmrc`; npm comes with Node.js. Create a GitHub account. We verify versions together before generating the application and commit the resulting lockfile. Future Prisma and Vitest versions are selected and checked when introduced; this plan does not assume that older setup commands remain valid.
 
 Start with [session 1](lessons/01-frameworks-and-components/README.md). If you miss a session, compare your application with the [milestone table](PROJECT.md#what-exists-after-each-session), complete the missing work in order, and ask the teacher for help if the gap is growing.
 

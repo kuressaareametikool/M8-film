@@ -24,13 +24,27 @@ An empty-repository warning during cloning is expected. `git clone` creates a lo
 
 ## 2. Verify tools and generate the application
 
+### Select Node.js 24 LTS
+
+Use Node.js **24 LTS** for this project. It is a maintained LTS line with an established ecosystem. Install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) first if needed (macOS, Linux, or Windows through WSL), then reopen your terminal.
+
+From your repository root:
+
 ```bash
+nvm install 24
+nvm use 24
 node --version
 npm --version
 git --version
 ```
 
-Use a maintained Node.js LTS release compatible with the current generator and selected packages. Check the [official installation requirements](https://nextjs.org/docs/app/getting-started/installation) rather than relying on an old minimum version. Record the tested version in your application setup instructions. If the course uses nvm, record it in `.nvmrc` as well.
+`nvm install 24` installs the latest available patch of Node.js 24; `nvm use 24` selects it for the current terminal. Check that `node --version` starts with `v24.`. npm is included with Node.js.
+
+We will save the exact selected version in `.nvmrc` immediately after generating the application. Keep the folder empty apart from Git metadata until then, because the generator checks for conflicting files.
+
+See the [Node.js release schedule](https://nodejs.org/en/about/previous-releases) and [Next.js requirements](https://nextjs.org/docs/app/getting-started/installation).
+
+### Generate the application
 
 From the repository root:
 
@@ -60,7 +74,27 @@ Go through the selections one at a time:
 
 Verified with create-next-app 16.4.6 in an interactive terminal. The wording and order can vary by version. Choosing custom settings is essential: accepting the recommended defaults enables Tailwind. If offered a bundler choice, keep the default.
 
-Commit `package-lock.json` so everyone can reproduce the selected dependency versions with `npm ci`.
+### Record the Node.js version
+
+Once generation finishes, save the active version in `.nvmrc`:
+
+```bash
+node --version > .nvmrc
+nvm use
+```
+
+The file contains an exact version such as `v24.x.y` with actual numbers. Commit `.nvmrc` with the project. In a new terminal, run `nvm use` from the repository root to select that version; on another computer, run `nvm install` first to install the version recorded in the file. Creating `.nvmrc` alone does not switch Node.js automatically.
+
+Commit `package-lock.json` as well so `npm ci` reproduces the selected dependency versions. Include these commands in your project README:
+
+```bash
+nvm install
+nvm use
+npm ci
+npm run dev
+```
+
+For the first run, dependencies are already installed by the generator:
 
 ```bash
 npm run dev
@@ -83,6 +117,7 @@ Open http://localhost:3000. Keep the server running in this terminal; use anothe
 | `next.config.ts` | Next.js configuration |
 | `eslint.config.mjs` | Code checks |
 | `.gitignore` | Generated and local files excluded from Git |
+| `.nvmrc` | Exact Node.js version used by the project |
 
 `node_modules/` contains installed packages. `.next/` contains generated output. Do not edit these folders or commit them.
 
@@ -109,7 +144,7 @@ A React component is a function that returns JSX. `.tsx` permits JSX in a TypeSc
 
 ## 5. Add the shared layout
 
-Use semantic HTML and the browser’s default appearance. Styling is covered in another course.
+Use semantic HTML and the browser’s default appearance.
 
 The generated starter may include CSS files and font setup. The replacement layout below removes those imports and font settings. Delete the unused `app/globals.css` and `app/page.module.css` files if they exist, after replacing the starter page and layout with these examples.
 
@@ -317,7 +352,9 @@ Review staged files before committing: no `node_modules/`, `.next/`, or secrets.
 
 | Symptom | Check |
 |---|---|
-| `node` or `npm` not found | Install Node.js and reopen the terminal. |
+| `node` or `npm` not found | Install nvm, reopen the terminal, and run `nvm install 24`. |
+| `nvm` not found | Follow the nvm installation instructions and reopen the terminal; on Windows use WSL for these commands. |
+| `nvm use` reports a missing version | Run `nvm install` from the repository root to install the version in `.nvmrc`. |
 | `package.json` not found | Run npm commands from the repository root containing `package.json`. |
 | `/movies` returns 404 | Check the exact path `app/movies/page.tsx`. |
 | Import cannot be resolved | Check case, file names, and the `@/*` alias. |

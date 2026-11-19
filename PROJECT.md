@@ -4,7 +4,7 @@ Build a small, single-club application over seven sessions. Members suggest movi
 
 ## Scope
 
-Required: a home page, movie list, create/edit/delete forms, persistent anonymous votes, validation, selectable ranking, tests, and English documentation. Use semantic HTML and browser defaults. Styling, CSS frameworks, and UI component libraries belong to another course. Authentication, individual voter identity, external movie APIs, and deployment are outside the required scope.
+Required: a home page, movie list, create/edit/delete forms, persistent anonymous votes, validation, selectable ranking, tests, and English documentation. Use semantic HTML and browser defaults. Authentication, individual voter identity, external movie APIs, and deployment are outside the required scope.
 
 Anonymous voting intentionally permits repeated votes. Do not claim that this design enforces one vote per person. A vote is a persisted event associated with one movie.
 
