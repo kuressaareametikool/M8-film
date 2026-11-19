@@ -13,7 +13,7 @@ Session 1 routes, components, genre field, and code conventions are complete.
 
 A browser-memory prototype that adds movies, removes them, and increments votes.
 
-**Material status:** teaching plan. A detailed, version-checked Next.js walkthrough will be added when this session is prepared. The sequence below defines the intended work and acceptance checks.
+Follow the [Next.js walkthrough](nextjs.md) during class and when catching up. It includes complete code, checkpoints, manual verification, and hints for independent work.
 
 ## Concepts
 

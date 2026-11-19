@@ -37,9 +37,9 @@ The seven sessions are a compressed plan, not a claim that the full fifteen-less
 
 ## Lesson files
 
-Each lesson has a `README.md`: purpose, concepts, class sequence, independent tasks, self-check, and exit checklist. Session 1 also has a [complete Next.js starter walkthrough](lessons/01-frameworks-and-components/nextjs.md), reorganised from the original guide.
+Each lesson has a `README.md`: purpose, concepts, class sequence, independent tasks, self-check, and exit checklist. Sessions 1 and 2 also have complete Next.js walkthroughs: [project setup and components](lessons/01-frameworks-and-components/nextjs.md), and [state, forms, and validation](lessons/02-state-and-forms/nextjs.md).
 
-Sessions 2–7 are teaching plans. Their detailed `nextjs.md` walkthroughs will be written and verified one session at a time as we reach them. A plan is not a runnable implementation guide. This keeps later framework-specific instructions aligned with the packages actually selected in class.
+Sessions 3–7 are teaching plans. Their detailed `nextjs.md` walkthroughs will be written and verified one session at a time as we reach them. A plan is not a runnable implementation guide. This keeps later framework-specific instructions aligned with the packages actually selected in class.
 
 ## Learning outcomes and evidence
 
@@ -69,7 +69,9 @@ lessons/
   01-frameworks-and-components/
     README.md             Concepts, tasks, and checks
     nextjs.md             Starter walkthrough
-  02-state-and-forms/README.md
+  02-state-and-forms/
+    README.md
+    nextjs.md             State and forms walkthrough
   03-orm-and-persistence/README.md
   04-crud-and-layers/README.md
   05-patterns-and-ranking/README.md
