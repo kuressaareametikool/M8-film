@@ -42,12 +42,12 @@ Paths below are relative to the student repository root; they are introduced inc
 | Responsibility | Planned location | Introduced |
 |---|---|---|
 | Routes and shared layout | `app/page.tsx`, `app/layout.tsx`, `app/movies/page.tsx` | 01 |
-| Presentation | `components/MovieCard.tsx`, later form and list components | 01–02 |
+| Presentation | `components/MovieCard.tsx`, `components/MovieList.tsx`, later form components | 01–02; forms in 04 |
 | Initial typed fixture | `lib/movies.ts` | 01; replaced as persistence is introduced |
 | Schema and migrations | `prisma/` | 03 |
 | Prisma configuration/client setup | Version-appropriate configuration plus `lib/db.ts` | 03 |
 | Request handling | `app/movies/actions.ts` | 04 |
-| Validation | `lib/movie-validation.ts` | 02, server reuse in 04 |
+| Validation | `lib/movie-validation.ts` | 04 |
 | Repository contract and Prisma adapter | `lib/movie-repository.ts`, `lib/prisma-movie-repository.ts` | 04–05 |
 | Application operations | `lib/movie-service.ts` | 04–05 |
 | Pure ranking strategies | `lib/ranking.ts` | 05 |
@@ -67,7 +67,7 @@ Use plain functions, small TypeScript interfaces, and explicit dependency argume
 | After | In class | Independent |
 |---|---|---|
 | 01 | Running Next.js app, home and movie routes, shared layout, typed fixtures, `MovieCard` | Genre field, request trace, `CODESTYLE.md`, commits |
-| 02 | Browser-memory add/remove/vote flows and validation | Error and empty states; documented refresh behaviour |
+| 02 | Browser-memory movie selection and voting | Derived total, clear selection, documented refresh behaviour |
 | 03 | SQLite schema, migrations, seeded movies and votes, persistent list | Relation and aggregate query exercises |
 | 04 | Server-backed create/edit/delete/vote flows and separated responsibilities | Missing-ID handling, server validation, architecture notes |
 | 05 | Genre filter, popular/newest strategies, shares and deterministic ties | Decision table and hand-calculated examples; pattern notes |

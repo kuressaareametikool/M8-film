@@ -28,16 +28,16 @@ The seven sessions are a compressed plan, not a claim that the full fifteen-less
 | # | Topic | In-class result | Required independent work | Outcomes |
 |---|---|---|---|---|
 | [01](lessons/01-frameworks-and-components/README.md) | Framework, request lifecycle, components, code standard | Two routes, shared layout, typed movie data, reusable card | Add a genre, trace one request, write code conventions | ÕV3, ÕV7 |
-| [02](lessons/02-state-and-forms/README.md) | State, forms, validation | Add, remove, and vote in browser memory | Validation feedback, empty state, refresh experiment | ÕV2, ÕV3, ÕV7 |
+| [02](lessons/02-state-and-voting/README.md) | State, selection, and voting | Choose existing movies and vote in browser memory | Derived total, clear selection, refresh experiment | ÕV2, ÕV3, ÕV7 |
 | [03](lessons/03-orm-and-persistence/README.md) | SQLite, Prisma, migrations, relationships | Persistent movies and related votes; database-backed list | Query practice and explain the schema | ÕV4 |
-| [04](lessons/04-crud-and-layers/README.md) | Server mutations and application layers | Persistent create, edit, delete, and vote; thin server actions | Finish error handling and document the request flow | ÕV1, ÕV3, ÕV4 |
+| [04](lessons/04-crud-and-layers/README.md) | Forms, validation, and application layers | Persistent create, edit, delete, and vote; thin server actions | Finish error handling and document the request flow | ÕV1, ÕV3, ÕV4 |
 | [05](lessons/05-patterns-and-ranking/README.md) | Strategy, Repository, Adapter, ranking | Deterministic ranking and a replaceable vote service dependency | Boundary table, pattern explanations, ranking examples | ÕV1, ÕV2, ÕV8 |
 | [06](lessons/06-testing-and-mocks/README.md) | Vitest, unit tests, test doubles | Pure logic tests and service tests with a mock repository | Complete boundary cases and run checks in CI | ÕV5, ÕV6, ÕV7 |
 | [07](lessons/07-integration-and-documentation/README.md) | Integration, integrity, documentation, demonstration | Tested persistence and a reproducible English handover | Fix review findings and submit the project | ÕV4, ÕV5, ÕV8, ÕV9 |
 
 ## Lesson files
 
-Each lesson has a `README.md`: purpose, concepts, class sequence, independent tasks, self-check, and exit checklist. Sessions 1 and 2 also have complete Next.js walkthroughs: [project setup and components](lessons/01-frameworks-and-components/nextjs.md), and [state, forms, and validation](lessons/02-state-and-forms/nextjs.md).
+Each lesson has a `README.md`: purpose, concepts, class sequence, independent tasks, self-check, and exit checklist. Sessions 1 and 2 also have complete Next.js walkthroughs: [project setup and components](lessons/01-frameworks-and-components/nextjs.md), and [state, selection, and voting](lessons/02-state-and-voting/nextjs.md).
 
 Sessions 3–7 are teaching plans. Their detailed `nextjs.md` walkthroughs will be written and verified one session at a time as we reach them. A plan is not a runnable implementation guide. This keeps later framework-specific instructions aligned with the packages actually selected in class.
 
@@ -48,7 +48,7 @@ The identifiers below follow [M8's learning outcomes](https://github.com/kuressa
 | Outcome | What the student demonstrates | Main sessions |
 |---|---|---|
 | ÕV1 — Programming patterns | Explain and use a ranking Strategy, a Repository boundary, an Adapter, and explicit dependency passing | 04–06 |
-| ÕV2 — Mathematics and logic | Validate inputs, calculate vote shares, and apply deterministic ranking rules | 02, 05–06 |
+| ÕV2 — Mathematics and logic | Validate inputs, calculate vote shares, and apply deterministic ranking rules | 02, 04–06 |
 | ÕV3 — MVC architecture | Trace a request and separate presentation, request handling, application logic, and persistence; explain how App Router differs from classic MVC | 01–04 |
 | ÕV4 — ORM best practices | Use migrations, relationships, constraints, aggregate queries, and isolated database tests | 03–04, 07 |
 | ÕV5 — Unit testing | Choose meaningful boundaries and explain unit versus integration testing | 06–07 |
@@ -69,9 +69,9 @@ lessons/
   01-frameworks-and-components/
     README.md             Concepts, tasks, and checks
     nextjs.md             Starter walkthrough
-  02-state-and-forms/
+  02-state-and-voting/
     README.md
-    nextjs.md             State and forms walkthrough
+    nextjs.md             Selection and voting walkthrough
   03-orm-and-persistence/README.md
   04-crud-and-layers/README.md
   05-patterns-and-ranking/README.md

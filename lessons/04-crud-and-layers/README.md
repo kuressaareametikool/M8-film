@@ -21,6 +21,10 @@ Persistent create, edit, delete, and vote operations with clear responsibilities
 
 Create, Read, Update, and Delete cover the movie lifecycle. Editing is added here so the final project demonstrates full CRUD.
 
+### Forms and validation
+
+Introduce movie create/edit forms here. Read string input, trim title and genre, parse the integer year, and validate against PROJECT.md. Pass the current year into a pure validation function so it can be tested independently. Show field feedback and retain invalid values for correction.
+
 ### Request boundary
 
 A server action reads form data, calls validation/application logic, handles the result, and refreshes or redirects the UI. Client validation alone cannot protect server writes.
@@ -38,7 +42,7 @@ A missing movie is different from invalid form data. Voting must reject a missin
 | Minutes | Work |
 |---|---|
 | 0–15 | Trace one read and plan the write flow. |
-| 15–45 | Introduce validation reuse, repository operations, and a service. |
+| 15–45 | Introduce form inputs, pure validation with an explicit current year, repository operations, and a service. |
 | 45–75 | Connect create and edit forms to server actions. |
 | 75–100 | Connect delete and vote; refresh the rendered list. |
 | 100–120 | Check invalid IDs, restart persistence, and commit. |
