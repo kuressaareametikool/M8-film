@@ -37,7 +37,7 @@ The browser-memory prototype in session 2 can use a `votes: number` display fiel
 
 ## Responsibilities and code map
 
-Paths below are planned inside `filmiklubi/`; they are introduced incrementally.
+Paths below are relative to the student repository root; they are introduced incrementally.
 
 | Responsibility | Planned location | Introduced |
 |---|---|---|

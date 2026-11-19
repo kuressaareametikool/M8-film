@@ -47,8 +47,8 @@ Filtering and aggregation are linear in the number of movies. General comparison
 
 Complete these required tasks before the next session:
 
-1. Write filmiklubi/docs/algorithm.md with pipeline order, examples, boundary table, and complexity.
-2. Write filmiklubi/docs/patterns.md pointing to each pattern and explaining when it helps.
+1. Write docs/algorithm.md with pipeline order, examples, boundary table, and complexity.
+2. Write docs/patterns.md pointing to each pattern and explaining when it helps.
 3. Calculate expected results for ties, all-zero votes, a single movie, and a genre with no matches.
 
 **Optional extension:** Add a third ranking strategy with documented tie rules; keep filtering and share calculations unchanged.

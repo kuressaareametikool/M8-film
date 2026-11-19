@@ -77,7 +77,7 @@ lessons/
   07-integration-and-documentation/README.md
 ```
 
-This repository contains the course materials. Each student creates their own GitHub repository and builds the `filmiklubi/` application folder inside it. Read the guides here; keep your application source and your own project README in your repository. Run npm commands inside `filmiklubi/`.
+This repository contains the course materials. Each student creates their own GitHub repository and builds the application directly in its root. Read the guides here; keep your application source and your own project README in your repository. Run npm commands from your repository root.
 
 ## Before session 1
 
@@ -87,4 +87,4 @@ Start with [session 1](lessons/01-frameworks-and-components/README.md). If you m
 
 ## Using AI
 
-You must understand and explain submitted code. Check framework suggestions against the installed version. Keep a short English `filmiklubi/docs/ai-usage.md` describing assistance received and one correction you made after checking it.
+You must understand and explain submitted code. Check framework suggestions against the installed version. Keep a short English `docs/ai-usage.md` describing assistance received and one correction you made after checking it.

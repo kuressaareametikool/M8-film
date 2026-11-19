@@ -49,7 +49,7 @@ Complete these required tasks before the next session:
 
 1. Finish missing-movie, invalid-ID, and invalid-field feedback.
 2. Show that invalid server input causes no database write.
-3. Write filmiklubi/docs/architecture.md mapping one read and write to layers and explaining the MVC comparison.
+3. Write docs/architecture.md mapping one read and write to layers and explaining the MVC comparison.
 
 **Optional extension:** Improve pending-state feedback while keeping the server as the source of persistent data.
 

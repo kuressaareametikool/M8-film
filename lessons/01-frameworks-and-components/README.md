@@ -34,7 +34,7 @@ Use TypeScript, clear English identifiers, consistent formatting, ESLint, and sm
 | Minutes | Work |
 |---|---|
 | 0–15 | Verify tools, discuss prerequisites, and trace a request. |
-| 15–35 | Create and clone your own repository; create the application in filmiklubi/. |
+| 15–35 | Create and clone your own repository; create the application in its root. |
 | 35–65 | Build the home page and shared layout. |
 | 65–100 | Add the movies route, typed data, and MovieCard. |
 | 100–120 | Verify both routes, explain responsibilities, and commit. |
@@ -44,8 +44,8 @@ Use TypeScript, clear English identifiers, consistent formatting, ESLint, and sm
 Complete these required tasks before the next session:
 
 1. Add a fourth movie and a required genre field to the Movie type and card.
-2. Write filmiklubi/CODESTYLE.md: naming, indentation, imports, types, lint command, and English commit messages.
-3. Write filmiklubi/docs/request-flow.md describing what happens when /movies is opened.
+2. Write CODESTYLE.md: naming, indentation, imports, types, lint command, and English commit messages.
+3. Write docs/request-flow.md describing what happens when /movies is opened.
 
 **Optional extension:** Create an About route using the same layout; explain which parts are shared.
 

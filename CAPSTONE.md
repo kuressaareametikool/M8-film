@@ -6,7 +6,7 @@ Submit the application developed during the seven sessions. This is a proposed a
 
 Provide a Git repository containing:
 
-- A working `filmiklubi/` application with movie create/read/update/delete, anonymous voting, filtering, and ranking.
+- A working application in the repository root with movie create/read/update/delete, anonymous voting, filtering, and ranking.
 - Prisma schema, migrations, and seed instructions; no generated local database or secrets.
 - A lockfile and reproducible English setup instructions, including the verified Node.js version.
 - `CODESTYLE.md`, consistent commits, and automated lint/build/test checks.
@@ -16,7 +16,7 @@ Provide a Git repository containing:
 - Two short decision records: why SQLite/Prisma, and why the chosen server/component boundaries. Include an entity relationship diagram and a request-flow diagram in the architecture document.
 - `docs/ai-usage.md` when AI assistance was used.
 
-All application documentation paths above are relative to `filmiklubi/` in the student's own repository. Its root README should introduce the project and link to the application setup instructions. The course overview remains in the teacher's repository.
+All application documentation paths above are relative to the student's repository root. Its README should introduce the project and include the application setup instructions. The course overview remains in the teacher's repository.
 
 An extension is optional in this seven-session plan. Possible extensions: a watched flag with an explicit ranking policy, CSV export, or a movie-night duration budget. Finish the required behaviour and evidence first.
 

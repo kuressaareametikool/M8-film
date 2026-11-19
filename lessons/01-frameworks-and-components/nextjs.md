@@ -4,11 +4,11 @@
 
 Start with your own new GitHub repository and no application. Finish with two routes, a shared layout, typed movie fixtures, and a reusable card. This reorganises the original starter guide; do not implement later sessions yet.
 
-All application paths below are relative to `filmiklubi/` inside your own repository. Keep your repository open in the editor and read this course guide separately on GitHub.
+All application paths below are relative to your own repository root. Keep your repository open in the editor and read this course guide separately on GitHub.
 
 ## 1. Create your own repository
 
-On GitHub, create a new repository for your Movie Club project. Choose your own repository name and initialise it with a README. Copy its HTTPS URL, then replace the example values below:
+On GitHub, create a new repository for your Movie Club project. Choose a lowercase repository name such as `filmiklubi`. Leave it empty: do not add a README, `.gitignore`, or licence yet. The generator will create the project files directly in this repository. Copy its HTTPS URL, then replace the example values below:
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
@@ -18,9 +18,9 @@ git remote -v
 code .
 ```
 
-`git clone` downloads a local working copy. `origin` should refer to the repository you just created. If `code .` is unavailable, use **File → Open Folder** in the editor.
+An empty-repository warning during cloning is expected. `git clone` creates a local working copy with its Git connection already configured. `origin` should refer to the repository you just created. If `code .` is unavailable, use **File → Open Folder** in the editor.
 
-**Checkpoint:** the editor shows your new repository and its README; `git remote -v` points to your GitHub repository. The course materials stay in the teacher’s repository.
+**Checkpoint:** the editor has your empty repository folder open; `git remote -v` points to your GitHub repository. The course materials stay in the teacher’s repository.
 
 ## 2. Verify tools and generate the application
 
@@ -35,21 +35,40 @@ Use a maintained Node.js LTS release compatible with the current generator and s
 From the repository root:
 
 ```bash
-npx create-next-app@latest filmiklubi --disable-git
+npx create-next-app@latest . --disable-git
 ```
 
-`npx` runs a package command. `@latest` selects the current stable generator. `--disable-git` keeps the application inside the existing repository instead of creating a nested Git repository.
+`npx` runs a package command. `@latest` selects the current stable generator. `.` means the current folder, so the application is created directly in the cloned repository. `--disable-git` preserves the existing Git setup.
 
-Choose custom settings: TypeScript, ESLint, App Router, no Tailwind CSS, no `src/` directory, and the default `@/*` alias. Leave React Compiler and optional caching features disabled for this exercise. Prompts can vary by version. Commit `package-lock.json` so everyone can reproduce the selected dependency versions with `npm ci`.
+When asked **“Would you like to use the recommended Next.js defaults?”**, select **“No, customize settings”**. Use the arrow keys to move between choices and press Enter to confirm.
+
+Go through the selections one at a time:
+
+| Question | Select |
+|---|---|
+| Use the recommended defaults? | **No, customize settings** |
+| Use TypeScript? | **Yes** |
+| Which linter? | **ESLint** |
+| Use React Compiler? | **No** |
+| Use Tailwind CSS? | **No** |
+| Put code inside a `src/` directory? | **No** |
+| Use App Router? | **Yes** |
+| Use Cache Components? | **No** |
+| Customize the import alias? | **No** — keep `@/*` |
+| Include `AGENTS.md`? | **No** |
+| Prepare anonymized agent feedback? | **No** |
+
+The wording and order can vary by version. Choosing custom settings is essential: accepting the recommended defaults enables Tailwind. If offered a bundler choice, keep the default.
+
+Commit `package-lock.json` so everyone can reproduce the selected dependency versions with `npm ci`.
 
 ```bash
-cd filmiklubi
 npm run dev
 ```
 
 Open http://localhost:3000. Keep the server running in this terminal; use another terminal for other commands. Stop it with **Ctrl+C**.
 
-**Checkpoint:** the starter page loads without errors. Run all subsequent npm commands in `filmiklubi/`.
+**Checkpoint:** the starter page loads without errors. Run all subsequent npm commands from this same repository root.
 
 ## 3. Understand the generated files
 
@@ -271,7 +290,7 @@ Follow the [session tasks](README.md#independent-work): add a fourth movie, add 
 
 ## 9. Verify and save
 
-From `filmiklubi/`:
+From your repository root:
 
 ```bash
 npm run lint
@@ -280,11 +299,11 @@ npm run build
 
 Use the generated lint script; if it is missing, check the selected ESLint setup before proceeding. In the browser, check `/`, `/movies`, navigation, shared header/footer, and all movie fields.
 
-From the repository root (use `cd ..` only if currently inside `filmiklubi/`):
+From the same repository root:
 
 ```bash
 git status
-git add filmiklubi
+git add .
 git diff --cached --stat
 git commit -m "Create Movie Club Next.js app"
 git push
@@ -299,7 +318,7 @@ Review staged files before committing: no `node_modules/`, `.next/`, or secrets.
 | Symptom | Check |
 |---|---|
 | `node` or `npm` not found | Install Node.js and reopen the terminal. |
-| `package.json` not found | Run npm commands from `filmiklubi/`. |
+| `package.json` not found | Run npm commands from the repository root containing `package.json`. |
 | `/movies` returns 404 | Check the exact path `app/movies/page.tsx`. |
 | Import cannot be resolved | Check case, file names, and the `@/*` alias. |
 | TypeScript says `genre` is missing | Add it to every movie fixture. |

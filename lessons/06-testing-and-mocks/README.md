@@ -49,7 +49,7 @@ Complete these required tasks before the next session:
 
 1. Cover the remaining meaningful rows of the ranking and validation boundary tables.
 2. Verify invalid input does not call repository writes and a valid operation calls the expected method with the expected data.
-3. Automate lint, build, and non-watch unit tests in CI; write filmiklubi/docs/testing.md with scope and limitations.
+3. Automate lint, build, and non-watch unit tests in CI; write docs/testing.md with scope and limitations.
 
 **Optional extension:** Use a small in-memory fake repository and compare it with interaction-focused mocks.
 
