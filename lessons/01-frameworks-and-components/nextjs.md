@@ -35,10 +35,10 @@ Use a maintained Node.js LTS release compatible with the current generator and s
 From the repository root:
 
 ```bash
-npx create-next-app@latest . --disable-git
+npx create-next-app@latest .
 ```
 
-`npx` runs a package command. `@latest` selects the current stable generator. `.` means the current folder, so the application is created directly in the cloned repository. `--disable-git` preserves the existing Git setup.
+`npx` runs a package command. `@latest` selects the current stable generator. `.` means the current folder, so the application is created directly in the cloned repository. The generator detects the existing Git repository automatically. Run this command without extra flags: in create-next-app 16.4.6, flags such as `--disable-git` skip the interactive selections and use defaults for unspecified options.
 
 When asked **“Would you like to use the recommended Next.js defaults?”**, select **“No, customize settings”**. Use the arrow keys to move between choices and press Enter to confirm.
 
@@ -58,7 +58,7 @@ Go through the selections one at a time:
 | Include `AGENTS.md`? | **No** |
 | Prepare anonymized agent feedback? | **No** |
 
-The wording and order can vary by version. Choosing custom settings is essential: accepting the recommended defaults enables Tailwind. If offered a bundler choice, keep the default.
+Verified with create-next-app 16.4.6 in an interactive terminal. The wording and order can vary by version. Choosing custom settings is essential: accepting the recommended defaults enables Tailwind. If offered a bundler choice, keep the default.
 
 Commit `package-lock.json` so everyone can reproduce the selected dependency versions with `npm ci`.
 
